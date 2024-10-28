@@ -102,7 +102,7 @@ func main() {
 		"-map", "0:v", // Map video stream
 		"-map", fmt.Sprintf("0:%d", audioTrackID), // Map audio stream
 		"-vf", fmt.Sprintf("subtitles=%s", *path), // Hardcode subtitles
-		"-c:v", "h264_nvenc", // Use NVIDIA NVENC for video encoding
+		"-c:v", "h264", // Use NVIDIA NVENC for video encoding
 		"-crf", "28", // Quality
 		"-preset", "slow", // Preset for encoding speed
 		"-c:a", "aac", // Audio codec
